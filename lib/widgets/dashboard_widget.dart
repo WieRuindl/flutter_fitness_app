@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fitness_app/widgets/activity_details_card.dart';
 import 'package:flutter_fitness_app/widgets/header_widget.dart';
+import 'package:flutter_fitness_app/widgets/line_chart_card.dart';
 
 class DashboardWidget extends StatelessWidget {
   const DashboardWidget({super.key});
@@ -15,6 +16,7 @@ class DashboardWidget extends StatelessWidget {
         SizedBox(height: 18,),
         ActivityDetailsCard(),
         SizedBox(height: 18,),
+        LineChartCard(),
       ],
     );
   }
