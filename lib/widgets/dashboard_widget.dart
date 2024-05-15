@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fitness_app/widgets/activity_details_card.dart';
 import 'package:flutter_fitness_app/widgets/header_widget.dart';
 
 class DashboardWidget extends StatelessWidget {
@@ -6,10 +7,14 @@ class DashboardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        const SizedBox(height: 18,),
-        const HeaderWidget(),
+        SizedBox(height: 18,),
+        HeaderWidget(),
+        SizedBox(height: 18,),
+        ActivityDetailsCard(),
+        SizedBox(height: 18,),
       ],
     );
   }
