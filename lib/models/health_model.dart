@@ -1,7 +1,10 @@
+import 'package:flutter/material.dart';
+
 class HealthModel {
-  final String icon;
+  final String iconPath;
+  final Color color;
   final String value;
   final String title;
 
-  HealthModel({required this.icon, required this.value, required this.title});
+  HealthModel({required this.iconPath, required this.color, required this.value, required this.title});
 }

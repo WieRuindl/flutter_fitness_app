@@ -24,9 +24,10 @@ class ActivityDetailsCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset(
-                healthDetails.data[index].icon,
+                healthDetails.data[index].iconPath,
                 width: 30,
                 height: 30,
+                color: healthDetails.data[index].color,
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 15, bottom: 4),
