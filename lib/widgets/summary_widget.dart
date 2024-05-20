@@ -13,6 +13,16 @@ class SummaryWidget extends StatelessWidget {
         children: [
           SizedBox(height: 20,),
           MyPieChart(),
+          Text(
+            "Summary",
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+          ),
+          SizedBox(height: 16,),
+          Padding(
+            padding: EdgeInsets.all(20.0),
+            child: SummaryDetailsWidget(),
+          ),
+
 
         ],
       ),
