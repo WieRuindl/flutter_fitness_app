@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_fitness_app/constants/constants.dart';
+import 'package:flutter_fitness_app/util/responsive.dart';
 import 'package:flutter_fitness_app/widgets/dashboard_widget.dart';
 import 'package:flutter_fitness_app/widgets/side_menu_widget.dart';
 import 'package:flutter_fitness_app/widgets/summary_widget.dart';
@@ -9,25 +11,31 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+
+    final isDesktop = Responsive.isDesktop(context);
+
+    return Scaffold(
+      drawer: !isDesktop ? SizedBox(width: 250, child: Container(decoration: const BoxDecoration(color: backgroundColor), child: const SideMenuWidget()),) : null,
       body: SafeArea(
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(
-              flex: 2,
-              child: SizedBox(
-                child: SideMenuWidget(),
+            if (isDesktop)
+              const Expanded(
+                flex: 2,
+                child: SizedBox(
+                  child: SideMenuWidget(),
+                ),
               ),
-            ),
-            Expanded(
+            const Expanded(
               flex: 7,
               child: DashboardWidget(),
             ),
-            Expanded(
-              flex: 3,
-              child: SummaryWidget(),
-            ),
+            if (isDesktop)
+              const Expanded(
+                flex: 3,
+                child: SummaryWidget(),
+              ),
           ],
         ),
 
