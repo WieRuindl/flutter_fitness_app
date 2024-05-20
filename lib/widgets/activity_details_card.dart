@@ -25,8 +25,8 @@ class ActivityDetailsCard extends StatelessWidget {
             children: [
               Image.asset(
                 healthDetails.data[index].iconPath,
-                width: 30,
-                height: 30,
+                width: 40,
+                height: 40,
                 color: healthDetails.data[index].color,
               ),
               Padding(

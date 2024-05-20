@@ -6,8 +6,10 @@ class HeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: TextField(
+    return
+      // Expanded(
+      // child:
+      TextField(
         decoration: InputDecoration(
           filled: true,
           fillColor: cardBackgroundColor,
@@ -29,7 +31,7 @@ class HeaderWidget extends StatelessWidget {
             size: 21,
           ),
         ),
-      ),
+      // ),
     );
   }
 }
