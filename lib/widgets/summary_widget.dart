@@ -22,7 +22,8 @@ class SummaryWidget extends StatelessWidget {
             padding: EdgeInsets.all(20.0),
             child: SummaryDetailsWidget(),
           ),
-
+          SizedBox(height: 40,),
+          ScheduledWidget(),
 
         ],
       ),
